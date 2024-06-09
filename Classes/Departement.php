@@ -30,6 +30,10 @@ class Departement {
         return $this->employes;
     }
 
+
+    
+    //affecter est pour ajouter un employe a la departement
+
     public function Affecter(Employe $employe) {
         $this->employes[] = $employe;
     }

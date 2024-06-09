@@ -51,6 +51,9 @@ class Employe {
         return $this->fonction;
     }
 
+
+    // getDepartement est pour ajouter une departement a un employe
+
     public function getDepartement(): Departement {
         return $this->departement;
     }
@@ -63,6 +66,8 @@ class Employe {
         return $this->projets;
     }
 
+    // travailler est pour ajouter un project a un employee
+
     public function Travailler(Projet $project, $dateAffectation, $fonction) {
         $employeProjet = new EmployeProjet($this, $project, $dateAffectation, $fonction);
         
@@ -72,6 +77,7 @@ class Employe {
 
 }
 
+// classe de chef de projet est pour ajouter un chef de project avec les memes info de employe en ajoutant une methode dirigerProjet pour affecter un projet a un chef de projet
 
 class ChefProject extends Employe {
     public function __construct(string $matricule, string $nom, float $salaire, float $commission, string $dateEntree, Departement $departement) {

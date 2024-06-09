@@ -64,6 +64,10 @@ class Projet {
         return $this->employes;
     }
 
+
+
+    //diriger pour affecter le project pour un employee en ajoutons la date d'affectation et le fonctionnement
+
     public function Diriger( Employe  $employee, $dateAffectation, $fonction)
     {
         $employeProjet = new EmployeProjet($employee, $this, $dateAffectation, $fonction);
